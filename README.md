@@ -1,0 +1,2 @@
+# MAAT
+Marketing Abstract Toolkit
