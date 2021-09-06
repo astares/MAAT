@@ -62,6 +62,13 @@ Demographics >> householdIncome: anObject [
 	householdIncome := anObject
 ]
 
+{ #category : #initialization }
+Demographics >> initialize [
+
+	super initialize.
+	
+]
+
 { #category : #accessing }
 Demographics >> occupation [
 

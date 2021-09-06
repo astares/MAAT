@@ -10,3 +10,33 @@ Class {
 	],
 	#category : #'Business-Marketing-Core-Model'
 }
+
+{ #category : #accessing }
+TargetAudienceGroup >> addAudience: anAudience [
+
+	audiences add: anAudience 
+]
+
+{ #category : #accessing }
+TargetAudienceGroup >> audiences [
+
+	^ audiences ifNil: [ audiences := OrderedCollection new ]
+]
+
+{ #category : #accessing }
+TargetAudienceGroup >> audiences: anObject [
+
+	audiences := anObject
+]
+
+{ #category : #accessing }
+TargetAudienceGroup >> name [
+
+	^ name
+]
+
+{ #category : #accessing }
+TargetAudienceGroup >> name: anObject [
+
+	name := anObject
+]

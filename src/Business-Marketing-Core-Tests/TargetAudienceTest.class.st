@@ -23,7 +23,8 @@ TargetAudienceTest >> testInitialization [
 	self 
 		assert: instance interests isEmpty;
 		assert: instance behaviours isEmpty;
-		assert: instance isPrimaryTargetAudience 
+		assert: instance isPrimaryTargetAudience;
+		assert: instance demographics isNotNil 
 ]
 
 { #category : #tests }
