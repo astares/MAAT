@@ -22,7 +22,8 @@ TargetAudienceTest >> testInitialization [
 
 	self 
 		assert: instance interests isEmpty;
-		assert: instance behaviours isEmpty 
+		assert: instance behaviours isEmpty;
+		assert: instance isPrimaryTargetAudience 
 ]
 
 { #category : #tests }
@@ -31,4 +32,18 @@ TargetAudienceTest >> testInstanceCreation [
 	| audience |
 	audience := TargetAudience named: 'Primary audience'.
 	self assert: audience name equals: 'Primary audience'
+]
+
+{ #category : #tests }
+TargetAudienceTest >> testSecondaryTargetAudience [
+
+	self 
+		assert: instance isPrimaryTargetAudience;
+		deny: instance isSecondaryTargetAudience. 
+		
+	instance rank: 2.
+
+	self 
+		assert: instance isSecondaryTargetAudience;
+		deny: instance isPrimaryTargetAudience
 ]
